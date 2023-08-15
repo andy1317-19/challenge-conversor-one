@@ -2,6 +2,14 @@ package conversorMoneda;
 import javax.swing.JOptionPane;
 
 
+/**
+ * 
+ * @author andre
+ * The class Menu represents the main pop up window.
+ * 
+ *
+ */
+
 public class Menu {
 
 	
@@ -11,7 +19,7 @@ public class Menu {
 	}
 	
 	
-	private static void promptMenu() {
+	protected static void promptMenu() {
 
 		String[] menuSelector = new String[2];
 		menuSelector[0]="Conversor de Moneda";

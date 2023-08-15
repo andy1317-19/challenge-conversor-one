@@ -2,7 +2,11 @@ package conversorMoneda;
 
 import javax.swing.JOptionPane;
 
-public class Temperature {
+
+/*
+ * The class tempConverter contains in an array the 6 temperature measurement types, based on conditionals the code redirect to each one of them.
+ */
+public class Temperature extends Menu {
 
 	
 	protected static void tempConverter(){
@@ -100,7 +104,7 @@ public class Temperature {
 				JOptionPane.showMessageDialog(null, "Resultado de la conversión: " + operation + " grados Celsius ", "Resultado", JOptionPane.INFORMATION_MESSAGE);	
 			}
 		
-
+			promptMenu();
 	}
 		
 		

@@ -2,7 +2,11 @@ package conversorMoneda;
 
 import javax.swing.JOptionPane;
 
-public class Currency {
+
+/*
+ * All the currencies are based on an array. The redirection of each one depends on conditionals IF 
+ */
+public class Currency extends Menu {
 
 	
 	protected static void CurrencyConvertor() {
@@ -39,7 +43,6 @@ public class Currency {
 			}else{
 				JOptionPane.showMessageDialog(null, "Resultado de la conversión: $" + operation + " Dolar(es)", "Resultado", JOptionPane.INFORMATION_MESSAGE);	
 			}
-			
 		}
 		if(selectedBadge.equals("Pesos a Euros") ) {
 			float TRM = 4444;
@@ -153,6 +156,8 @@ public class Currency {
 				JOptionPane.showMessageDialog(null, "Resultado de la conversión: $" + operation + " Peso(s)", "Resultado", JOptionPane.INFORMATION_MESSAGE);	
 			}
 			
+			promptMenu();
+
 		}
 		
 		
