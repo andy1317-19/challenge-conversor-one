@@ -10,6 +10,8 @@ public class Temperature extends Menu {
 
 	
 	protected static void tempConverter(){
+		
+		try {
 		String[] options = new String[6];
 		
 		options[0]= "Celsius a Fahrenheit";
@@ -104,10 +106,13 @@ public class Temperature extends Menu {
 				JOptionPane.showMessageDialog(null, "Resultado de la conversión: " + operation + " grados Celsius ", "Resultado", JOptionPane.INFORMATION_MESSAGE);	
 			}
 		
-			promptMenu();
+			
 	}
 		
 		
+	}catch(NumberFormatException e) {
+		String errorMessage = "Recuerda que no puedes ingresar letras, intenta nuevamente" ;
+	    JOptionPane.showMessageDialog(null, errorMessage, "Error", JOptionPane.ERROR_MESSAGE);
 }
-	
-}
+		promptMenu();
+}}

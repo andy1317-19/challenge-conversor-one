@@ -11,7 +11,7 @@ public class Currency extends Menu {
 	
 	protected static void CurrencyConvertor() {
 		
-		
+		try {
 		String[] badge = new String[10];
 		badge[0]= "Pesos a Dolar";
 		badge[1]= "Pesos a Euros";
@@ -30,6 +30,8 @@ public class Currency extends Menu {
 		System.out.println("Selected: " + selectedBadge);
 		String amountToConvert  =JOptionPane.showInputDialog(null, "Digite cantidad a convertir: "  + selectedBadge);
 		System.out.println("Entered : " + amountToConvert);
+		
+		
 		
 		// COP To other currencies
 		
@@ -156,12 +158,19 @@ public class Currency extends Menu {
 				JOptionPane.showMessageDialog(null, "Resultado de la conversión: $" + operation + " Peso(s)", "Resultado", JOptionPane.INFORMATION_MESSAGE);	
 			}
 			
-			promptMenu();
-
 		}
+		}catch(NumberFormatException e){
+			String errorMessage = "Recuerda que no puedes ingresar letras, intenta nuevamente" ;
+            JOptionPane.showMessageDialog(null, errorMessage, "Error", JOptionPane.ERROR_MESSAGE);
+		}
+			promptMenu();
+		}
+			
+
 		
 		
-	}
+		
+	
 	
 	
 }
